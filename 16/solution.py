@@ -11,7 +11,7 @@ import re
 raw_data = []
 raw_data_rows = 0
 raw_data_cols = 0
-with open("input") as file:
+with open("example_input") as file:
     ridx = 0
     line = file.readline()
     raw_data_cols = len(line) - 1 # because newline
@@ -139,7 +139,7 @@ while beams:
 # %%
             
 from collections import Counter
-print(Counter("".join(mapp))["#"])
+print(f"Solution task 1: {Counter("".join(mapp))["#"]}")
 
 # %%
 
@@ -251,5 +251,5 @@ max_lava = 0
 for start in starting_pos:
     max_lava = max(max_lava, ray(raw_data, [deepcopy(start)]))
 # %%
-print(max_lava)
+print(f"Solution task 2: {max_lava}")
 # %%
